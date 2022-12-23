@@ -1,22 +1,23 @@
 import React from "react";
 import { PropTypes } from 'prop-types';
+import css from '../Statistics/Statistics.module.css'
 
-const Statistics = ({ good, neutral, bad, total, goodPersentage, }) => {
+export const Statistics = ({ good, neutral, bad, total, goodPersentage, }) => {
     return(
         <div>
         <h2> Statistics</h2>
-        <ul>
-          <li>Good{good}</li>
-          <li>Neutral{neutral}</li>
-          <li>Bad{bad}</li>
-          <li>Total{total}</li>
-          <li>Positive feedback{goodPersentage}%</li>
+        <ul className={css.statistics}>
+          <li>Good: {good}</li>
+          <li>Neutral: {neutral}</li>
+          <li>Bad: {bad}</li>
+          <li>Total: {total}</li>
+          <li>Positive feedback: {goodPersentage}</li>
         </ul>
       </div>
     )
    
 }
-export default Statistics;
+
 
 Statistics.propTypes = {
     good: PropTypes.number.isRequired,

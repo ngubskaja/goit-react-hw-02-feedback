@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import css from '../Section/Section.module.css'
 
-
- const Section = ({ title }) => {
+export const Section = ({ title }) => {
     return (
-        <h2>{title}</h2>
+        <h2 className={css.title}>{title}</h2>
     )
 }
 
-export default Section;
+
 Section.propTypes = {
     title: PropTypes.string.isRequired
 }
