@@ -1,7 +1,7 @@
 import React from "react";
 import { PropTypes } from 'prop-types';
 
-export const Statistics = ({ good, neutral, bad, total, goodPersentage, }) => {
+const Statistics = ({ good, neutral, bad, total, goodPersentage, }) => {
     return(
         <div>
         <h2> Statistics</h2>
@@ -16,7 +16,7 @@ export const Statistics = ({ good, neutral, bad, total, goodPersentage, }) => {
     )
    
 }
-
+export default Statistics;
 
 Statistics.propTypes = {
     good: PropTypes.number.isRequired,

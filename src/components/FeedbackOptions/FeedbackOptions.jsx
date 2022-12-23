@@ -1,7 +1,7 @@
 import React from "react";
 import {PropTypes} from 'prop-types';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <ul>
         {options.map(el => 
             <li key={el}>
@@ -11,7 +11,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             </li>)}
     </ul>
 }
-
+export default FeedbackOptions;
 FeedbackOptions.propTypes = {
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     onLeaveFeedback: PropTypes.func.isRequired,
